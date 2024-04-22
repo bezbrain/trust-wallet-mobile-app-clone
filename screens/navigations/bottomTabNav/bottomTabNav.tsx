@@ -15,12 +15,16 @@ import { Colors } from "../../../utils/colors";
 
 const BottomTab = createBottomTabNavigator();
 
+const { blackprimary900, whiteprimary600 } = Colors;
+
 const BottomTabNav = () => {
   return (
     <BottomTab.Navigator
       screenOptions={{
-        headerStyle: { backgroundColor: Colors.blackprimary900 },
-        headerTintColor: Colors.whiteprimary600,
+        headerStyle: { backgroundColor: blackprimary900 },
+        headerTintColor: whiteprimary600,
+        tabBarStyle: { backgroundColor: blackprimary900 },
+        tabBarActiveTintColor: "#15b653",
       }}
     >
       <BottomTab.Screen
