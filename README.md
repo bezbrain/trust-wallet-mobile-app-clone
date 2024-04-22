@@ -1,1 +1,1 @@
-# TRUST WALLET MOBILE APPLICATION - CLONE
+# Trust Wallet Mobile Application -Clone
