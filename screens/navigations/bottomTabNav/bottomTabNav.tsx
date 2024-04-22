@@ -11,13 +11,17 @@ import {
   homeOptions,
   swapOptions,
 } from "./tabOptions/tabOptions";
+import { Colors } from "../../../utils/colors";
 
 const BottomTab = createBottomTabNavigator();
 
 const BottomTabNav = () => {
   return (
     <BottomTab.Navigator
-    //   screenOptions={}
+      screenOptions={{
+        headerStyle: { backgroundColor: Colors.blackprimary900 },
+        headerTintColor: Colors.whiteprimary600,
+      }}
     >
       <BottomTab.Screen
         name="WalletHome"
