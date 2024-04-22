@@ -8,25 +8,16 @@ import { AntDesign } from "@expo/vector-icons";
 import {
   discoverOptions,
   earnOptions,
+  generalTabOptions,
   homeOptions,
   swapOptions,
 } from "./tabOptions/tabOptions";
-import { Colors } from "../../../utils/colors";
 
 const BottomTab = createBottomTabNavigator();
 
-const { blackprimary900, whiteprimary600 } = Colors;
-
 const BottomTabNav = () => {
   return (
-    <BottomTab.Navigator
-      screenOptions={{
-        headerStyle: { backgroundColor: blackprimary900 },
-        headerTintColor: whiteprimary600,
-        tabBarStyle: { backgroundColor: blackprimary900 },
-        tabBarActiveTintColor: "#15b653",
-      }}
-    >
+    <BottomTab.Navigator screenOptions={generalTabOptions}>
       <BottomTab.Screen
         name="WalletHome"
         component={WalletPreview}

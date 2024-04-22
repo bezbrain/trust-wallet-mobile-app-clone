@@ -4,4 +4,6 @@ export const Colors = {
 
   whiteprimary900: "#ffffff",
   whiteprimary600: "#ccc",
+
+  greenprimary600: "#15b653",
 };

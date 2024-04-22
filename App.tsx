@@ -17,6 +17,6 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
-    color: "green",
+    // color: "#08622b",
   },
 });
