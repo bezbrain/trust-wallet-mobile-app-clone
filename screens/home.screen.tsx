@@ -4,6 +4,7 @@ import { Colors } from "../utils/colors";
 import { ScreenWrapper } from "../components/wrappers";
 import { useNavigation } from "@react-navigation/native";
 import { OptionsIcons } from "../assets/icons";
+import { HeaderComp } from "../components/screenComponents/homeComponents";
 
 const HomeScreen = () => {
   const navigation = useNavigation();
@@ -40,7 +41,7 @@ const HomeScreen = () => {
 
   return (
     <ScreenWrapper>
-      <Text style={styles.text}>Wallet Home</Text>
+      <HeaderComp />
     </ScreenWrapper>
   );
 };
