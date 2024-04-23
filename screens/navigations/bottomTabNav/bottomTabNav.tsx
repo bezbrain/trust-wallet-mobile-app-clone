@@ -12,6 +12,7 @@ import {
   homeOptions,
   swapOptions,
 } from "./tabOptions/tabOptions";
+import { Earn, SwapScreen } from "../../";
 
 const BottomTab = createBottomTabNavigator();
 
@@ -30,7 +31,7 @@ const BottomTabNav = () => {
       />
       <BottomTab.Screen
         name="Swap"
-        component={WalletPreview}
+        component={SwapScreen}
         options={{
           tabBarIcon: ({ color, size }) => {
             return <Entypo name="swap" size={size} color={color} />;
@@ -40,7 +41,7 @@ const BottomTabNav = () => {
       />
       <BottomTab.Screen
         name="Earn"
-        component={WalletPreview}
+        component={Earn}
         options={{
           tabBarIcon: ({ color, size }) => {
             return (

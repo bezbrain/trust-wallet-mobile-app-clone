@@ -1,17 +1,17 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
-import { Colors } from "../utils/colors";
+import { View, Text, StyleSheet } from "react-native";
 import { ScreenWrapper } from "../components/wrappers";
+import { Colors } from "../utils/colors";
 
-const WalletPreview = () => {
+const Earn = () => {
   return (
     <ScreenWrapper>
-      <Text style={styles.text}>Wallet Home</Text>
+      <Text style={styles.text}>Let's Earn</Text>
     </ScreenWrapper>
   );
 };
 
-export default WalletPreview;
+export default Earn;
 
 const styles = StyleSheet.create({
   text: {
