@@ -3,14 +3,17 @@ import { StatusBar } from "expo-status-bar";
 import { StyleSheet } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { StackNav } from "./screens";
+import { HomeProvider } from "./context/homeContext/homeContext";
 
 export default function App() {
   return (
     <>
       {/* <StatusBar style="auto" /> */}
-      <NavigationContainer>
-        <StackNav />
-      </NavigationContainer>
+      <HomeProvider>
+        <NavigationContainer>
+          <StackNav />
+        </NavigationContainer>
+      </HomeProvider>
     </>
   );
 }
