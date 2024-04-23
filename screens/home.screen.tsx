@@ -12,11 +12,11 @@ const HomeScreen = () => {
     //
   };
 
-  const handleSettingClick = () => {
+  const handleGeneralSettingClick = () => {
     //
   };
 
-  // RENDER HEADER ICON
+  // RENDER HOME HEADER ICONS
   useLayoutEffect(() => {
     navigation.setOptions({
       headerRight: () => {
@@ -28,10 +28,16 @@ const HomeScreen = () => {
         );
       },
       headerLeft: () => {
-        return <OptionsIcons name="setting" handlePress={handleSettingClick} />;
+        return (
+          <OptionsIcons
+            name="setting"
+            handlePress={handleGeneralSettingClick}
+          />
+        );
       },
     });
   }, [navigation]);
+
   return (
     <ScreenWrapper>
       <Text style={styles.text}>Wallet Home</Text>
