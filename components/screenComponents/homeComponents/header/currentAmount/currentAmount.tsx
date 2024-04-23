@@ -3,6 +3,7 @@ import { Pressable, StyleSheet, Text, View } from "react-native";
 import { Colors } from "../../../../../utils/colors";
 import { Entypo } from "@expo/vector-icons";
 import { useHomeContext } from "../../../../../context/homeContext/homeContext";
+import { HideValue } from "../../../../helpers";
 
 const { whiteprimary600, blackprimary100 } = Colors;
 
@@ -16,7 +17,8 @@ const CurrentAmount = () => {
   return (
     <Pressable onPress={handleToggleValue} style={styles.rootContainer}>
       <View style={styles.valueContainer}>
-        <Text style={styles.valueAmount}>$6.60</Text>
+        {!isOpen && <Text style={styles.valueAmount}>$6.60</Text>}
+        {isOpen && <HideValue />}
 
         <View style={styles.iconsContainer}>
           {!isOpen && <Entypo name="eye" size={24} color={blackprimary100} />}
