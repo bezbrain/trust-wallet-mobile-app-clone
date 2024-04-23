@@ -5,6 +5,7 @@ import { ScreenWrapper } from "../components/wrappers";
 import { useNavigation } from "@react-navigation/native";
 import { OptionsIcons } from "../assets/icons";
 import { HeaderComp } from "../components/screenComponents/homeComponents";
+import { ActivitiesComp } from "../components/screenComponents/homeComponents/activitiesComp";
 
 const HomeScreen = () => {
   const navigation = useNavigation();
@@ -42,6 +43,7 @@ const HomeScreen = () => {
   return (
     <ScreenWrapper>
       <HeaderComp />
+      <ActivitiesComp />
     </ScreenWrapper>
   );
 };

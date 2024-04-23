@@ -42,7 +42,7 @@ export default ChangeAccount;
 
 const styles = StyleSheet.create({
   accountContainer: {
-    paddingTop: 24,
+    marginTop: 24,
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
