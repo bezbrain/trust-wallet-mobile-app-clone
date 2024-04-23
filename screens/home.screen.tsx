@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from "react-native";
 import { Colors } from "../utils/colors";
 import { ScreenWrapper } from "../components/wrappers";
 
-const WalletPreview = () => {
+const HomeScreen = () => {
   return (
     <ScreenWrapper>
       <Text style={styles.text}>Wallet Home</Text>
@@ -11,7 +11,7 @@ const WalletPreview = () => {
   );
 };
 
-export default WalletPreview;
+export default HomeScreen;
 
 const styles = StyleSheet.create({
   text: {

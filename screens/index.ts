@@ -1,8 +1,8 @@
-import WalletPreview from "./walletPreview";
-import Earn from "./earn";
+import HomeScreen from "./home.screen";
+import EarnScreen from "./earn.screen";
 import SwapScreen from "./swap.screen";
 
 import StackNav from "./navigations/stackNav/stackNav";
 import BottomTabNav from "./navigations/bottomTabNav/bottomTabNav";
 
-export { WalletPreview, StackNav, BottomTabNav, Earn, SwapScreen };
+export { HomeScreen, StackNav, BottomTabNav, EarnScreen, SwapScreen };

@@ -1,6 +1,6 @@
 import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import WalletPreview from "../../walletPreview";
+import WalletPreview from "../../home.screen";
 import BottomTabNav from "../bottomTabNav/bottomTabNav";
 
 const Stack = createNativeStackNavigator();

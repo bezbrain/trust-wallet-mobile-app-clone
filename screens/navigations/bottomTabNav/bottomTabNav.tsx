@@ -1,6 +1,5 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import WalletPreview from "../../walletPreview";
 import { Feather } from "@expo/vector-icons";
 import { Entypo } from "@expo/vector-icons";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
@@ -12,7 +11,9 @@ import {
   homeOptions,
   swapOptions,
 } from "./tabOptions/tabOptions";
-import { Earn, SwapScreen } from "../../";
+import EarnScreen from "../../earn.screen";
+import HomeScreen from "../../home.screen";
+import SwapScreen from "../../swap.screen";
 
 const BottomTab = createBottomTabNavigator();
 
@@ -21,7 +22,7 @@ const BottomTabNav = () => {
     <BottomTab.Navigator screenOptions={generalTabOptions}>
       <BottomTab.Screen
         name="WalletHome"
-        component={WalletPreview}
+        component={HomeScreen}
         options={{
           tabBarIcon: ({ color, size }) => {
             return <Feather name="home" size={size} color={color} />;
@@ -41,7 +42,7 @@ const BottomTabNav = () => {
       />
       <BottomTab.Screen
         name="Earn"
-        component={Earn}
+        component={EarnScreen}
         options={{
           tabBarIcon: ({ color, size }) => {
             return (
@@ -57,7 +58,7 @@ const BottomTabNav = () => {
       />
       <BottomTab.Screen
         name="Discover"
-        component={WalletPreview}
+        component={HomeScreen}
         options={{
           tabBarIcon: ({ color, size }) => {
             return (

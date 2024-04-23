@@ -3,7 +3,7 @@ import { View, Text, StyleSheet } from "react-native";
 import { ScreenWrapper } from "../components/wrappers";
 import { Colors } from "../utils/colors";
 
-const Earn = () => {
+const EarnScreen = () => {
   return (
     <ScreenWrapper>
       <Text style={styles.text}>Let's Earn</Text>
@@ -11,7 +11,7 @@ const Earn = () => {
   );
 };
 
-export default Earn;
+export default EarnScreen;
 
 const styles = StyleSheet.create({
   text: {
