@@ -14,6 +14,7 @@ import {
 import EarnScreen from "../../earn.screen";
 import HomeScreen from "../../home.screen";
 import SwapScreen from "../../swap.screen";
+import DiscoverScreen from "../../discover.screen";
 
 const BottomTab = createBottomTabNavigator();
 
@@ -58,7 +59,7 @@ const BottomTabNav = () => {
       />
       <BottomTab.Screen
         name="Discover"
-        component={HomeScreen}
+        component={DiscoverScreen}
         options={{
           tabBarIcon: ({ color, size }) => {
             return (
