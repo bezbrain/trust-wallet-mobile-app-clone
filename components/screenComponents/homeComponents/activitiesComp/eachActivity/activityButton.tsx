@@ -9,13 +9,15 @@ const { whiteprimary600, blackprimary600 } = Colors;
 interface AcivityButtonProp {
   icon: any;
   name: string;
+  handlePress: () => void;
 }
 
-const ActivityButton = ({ icon, name }: AcivityButtonProp) => {
+const ActivityButton = ({ icon, name, handlePress }: AcivityButtonProp) => {
   return (
     <View>
       <Pressable
         style={({ pressed }) => rippleEffect(pressed, styles.iconContainer)}
+        onPress={handlePress}
       >
         <AntDesign name={icon} size={20} color={whiteprimary600} />
       </Pressable>

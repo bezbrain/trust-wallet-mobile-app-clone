@@ -61,7 +61,7 @@ const HomeScreen = () => {
       <HeaderComp />
       <ActivitiesComp />
 
-      {/* Crypto and NFTs */}
+      {/* Crypto and NFTs Header */}
       <View style={styles.currencyContainer}>
         <View style={styles.controlHeader}>
           <View style={styles.headerContainer}>

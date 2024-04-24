@@ -8,7 +8,7 @@ import CryptoBtns from "./cryptoBtn";
 import { crypto } from "../../../../../../data/homeData";
 import { CryptoLogo } from "../../../../../general";
 
-const { greenprimary600, blackprimary100 } = Colors;
+const { greenprimary600, blackprimary100, whiteprimary600 } = Colors;
 
 const SingleCrypto = () => {
   const navigation = useNavigation();
@@ -16,7 +16,7 @@ const SingleCrypto = () => {
   const cryptoId = router.params?.cryptoId;
 
   const findCrypto = crypto.find((each) => each.id == cryptoId);
-  console.log(findCrypto);
+  //   console.log(findCrypto);
 
   const notificationHandler = () => {
     //
@@ -51,8 +51,14 @@ const SingleCrypto = () => {
   return (
     <ScreenWrapper>
       <View>
-        <CryptoLogo image={findCrypto?.image} />
-        <Text>Crypto Amount</Text>
+        <View style={styles.imageContainer}>
+          <CryptoLogo image={findCrypto?.image} />
+        </View>
+        <Text style={styles.textHeader}>
+          {findCrypto?.cryptoAmt} {findCrypto?.name}
+        </Text>
+        <Text style={styles.amountValue}>≈ ${findCrypto?.cryptoValue}</Text>
+
         <CryptoBtns />
       </View>
     </ScreenWrapper>
@@ -61,4 +67,19 @@ const SingleCrypto = () => {
 
 export default SingleCrypto;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  imageContainer: {
+    alignItems: "center",
+    marginBottom: 12,
+  },
+  textHeader: {
+    color: whiteprimary600,
+    fontSize: 24,
+    textAlign: "center",
+    marginBottom: 4,
+  },
+  amountValue: {
+    color: blackprimary100,
+    textAlign: "center",
+  },
+});
