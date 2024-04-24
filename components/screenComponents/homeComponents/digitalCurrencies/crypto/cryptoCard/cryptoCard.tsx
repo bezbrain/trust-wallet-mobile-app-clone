@@ -2,7 +2,8 @@ import React from "react";
 import { View, Image, Text, StyleSheet } from "react-native";
 import { Colors } from "../../../../../../utils/colors";
 
-const { greenprimary600, whiteprimary600, blackprimary100 } = Colors;
+const { greenprimary600, whiteprimary600, blackprimary100, redprimary700 } =
+  Colors;
 
 interface CryptoCardProp {
   id: number;
@@ -35,11 +36,21 @@ const CryptoCard = ({
         <Text style={styles.whitishTextColor}>{name}</Text>
         <Text style={styles.grayishTextColor}>
           ${marketValue}{" "}
-          <Text style={styles.greenishTextColor}>{increment}</Text>
+          <Text
+            style={
+              increment.includes("+")
+                ? styles.greenishTextColor
+                : styles.redishTextColor
+            }
+          >
+            {increment}
+          </Text>
         </Text>
       </View>
       <View style={styles.myValue}>
-        <Text style={styles.whitishTextColor}>{cryptoAmt}</Text>
+        <Text style={[styles.whitishTextColor, { marginLeft: "auto" }]}>
+          {cryptoAmt}
+        </Text>
         <Text style={[styles.grayishTextColor, { marginLeft: "auto" }]}>
           ${cryptoValue}
         </Text>
@@ -76,5 +87,8 @@ const styles = StyleSheet.create({
   },
   greenishTextColor: {
     color: greenprimary600,
+  },
+  redishTextColor: {
+    color: redprimary700,
   },
 });

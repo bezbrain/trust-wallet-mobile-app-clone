@@ -7,4 +7,6 @@ export const Colors = {
   whiteprimary600: "#ccc",
 
   greenprimary600: "#15b653",
+
+  redprimary700: "#df0d0d",
 };

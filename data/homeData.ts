@@ -61,7 +61,7 @@ export const crypto = [
     id: 4,
     name: "LTC",
     marketValue: "86.77",
-    increment: "+2.73%",
+    increment: "-0.73%",
     cryptoAmt: "0",
     cryptoValue: "0.00",
     image:
@@ -101,7 +101,7 @@ export const crypto = [
     id: 8,
     name: "BRISE",
     marketValue: "0.05",
-    increment: "-0.22%",
+    increment: "+0.22%",
     cryptoAmt: "0",
     cryptoValue: "0.00",
     image:
