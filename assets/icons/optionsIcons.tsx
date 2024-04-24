@@ -3,6 +3,7 @@ import { AntDesign } from "@expo/vector-icons";
 import { Pressable, StyleSheet } from "react-native";
 import { useRoute } from "@react-navigation/native";
 import { Colors } from "../../utils/colors";
+import { rippleEffect } from "../../styles/ripple-effect";
 
 const { whiteprimary600 } = Colors;
 
@@ -16,8 +17,14 @@ const OptionsIcons = ({ name, handlePress }: OptionsIconsProps) => {
   //   console.log(route.name);
 
   return (
-    <Pressable style={styles.iconContainer} onPress={handlePress}>
-      <AntDesign name={name} size={20} color={whiteprimary600} />
+    <Pressable
+      style={({ pressed }) =>
+        rippleEffect(pressed, styles.activeHeaderIcon, styles.iconContainer)
+      }
+      onPress={handlePress}
+      android_ripple={{ color: "#ccc" }}
+    >
+      <AntDesign name={name} size={24} color={whiteprimary600} />
     </Pressable>
   );
 };
@@ -27,5 +34,8 @@ export default OptionsIcons;
 const styles = StyleSheet.create({
   iconContainer: {
     marginHorizontal: 8,
+  },
+  activeHeaderIcon: {
+    opacity: 0.5,
   },
 });
