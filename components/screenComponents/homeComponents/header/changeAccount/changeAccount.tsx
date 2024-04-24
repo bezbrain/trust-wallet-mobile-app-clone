@@ -19,20 +19,20 @@ const ChangeAccount = () => {
       </Pressable>
 
       <View style={styles.iconsContainer}>
-        <Pressable>
-          <Ionicons name="copy-outline" size={20} color={whiteprimary600} />
+        <Pressable style={({ pressed }) => rippleEffect(pressed)}>
+          <Ionicons name="copy-outline" size={24} color={whiteprimary600} />
         </Pressable>
-        <Pressable>
+        <Pressable style={({ pressed }) => rippleEffect(pressed)}>
           <MaterialCommunityIcons
             name="qrcode-scan"
-            size={20}
+            size={24}
             color={whiteprimary600}
           />
         </Pressable>
-        <Pressable>
+        <Pressable style={({ pressed }) => rippleEffect(pressed)}>
           <Ionicons
             name="notifications-outline"
-            size={20}
+            size={24}
             color={whiteprimary600}
           />
         </Pressable>
