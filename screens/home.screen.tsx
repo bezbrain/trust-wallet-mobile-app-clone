@@ -1,5 +1,5 @@
 import React, { useLayoutEffect } from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { Pressable, StyleSheet, Text, View } from "react-native";
 import { Colors } from "../utils/colors";
 import { ScreenWrapper } from "../components/wrappers";
 import { useNavigation } from "@react-navigation/native";
@@ -44,6 +44,15 @@ const HomeScreen = () => {
     <ScreenWrapper>
       <HeaderComp />
       <ActivitiesComp />
+
+      <View style={styles.currencyContainer}>
+        <Pressable>
+          <Text style={styles.headerText}>Crypto</Text>
+        </Pressable>
+        <Pressable>
+          <Text style={styles.headerText}>NFTs</Text>
+        </Pressable>
+      </View>
     </ScreenWrapper>
   );
 };
@@ -51,7 +60,10 @@ const HomeScreen = () => {
 export default HomeScreen;
 
 const styles = StyleSheet.create({
-  text: {
+  currencyContainer: {
+    marginTop: 24,
+  },
+  headerText: {
     color: Colors.whiteprimary600,
   },
 });

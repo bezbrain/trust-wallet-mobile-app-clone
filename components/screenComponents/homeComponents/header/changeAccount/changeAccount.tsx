@@ -58,6 +58,6 @@ const styles = StyleSheet.create({
   },
   iconsContainer: {
     flexDirection: "row",
-    gap: 16,
+    gap: 24,
   },
 });
