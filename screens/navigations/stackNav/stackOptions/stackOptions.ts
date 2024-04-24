@@ -3,7 +3,7 @@ import { crypto } from "../../../../data/homeData";
 
 const { blackprimary900, whiteprimary600, greenprimary600 } = Colors;
 
-// GENE OPTIONS THAT AFFECT THE WHOLE STACKS WITHIN THE MAIN STACK
+// GENERAL OPTIONS THAT AFFECT THE WHOLE STACKS WITHIN THE MAIN STACK
 export const generalStackOptions = {
   headerStyle: { backgroundColor: blackprimary900 },
   headerTintColor: whiteprimary600,

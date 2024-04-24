@@ -40,6 +40,7 @@ const HomeScreen = () => {
           <OptionsIcons
             name="codepen-circle"
             handlePress={handleManageAssetClick}
+            color={whiteprimary600}
           />
         );
       },
@@ -48,6 +49,7 @@ const HomeScreen = () => {
           <OptionsIcons
             name="setting"
             handlePress={handleGeneralSettingClick}
+            color={whiteprimary600}
           />
         );
       },

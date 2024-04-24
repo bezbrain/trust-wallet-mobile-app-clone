@@ -10,9 +10,10 @@ const { whiteprimary600 } = Colors;
 interface OptionsIconsProps {
   name: any;
   handlePress: () => void;
+  color: string;
 }
 
-const OptionsIcons = ({ name, handlePress }: OptionsIconsProps) => {
+const OptionsIcons = ({ name, handlePress, color }: OptionsIconsProps) => {
   const route = useRoute();
   //   console.log(route.name);
 
@@ -22,7 +23,7 @@ const OptionsIcons = ({ name, handlePress }: OptionsIconsProps) => {
       onPress={handlePress}
       android_ripple={{ color: "#ccc" }}
     >
-      <AntDesign name={name} size={24} color={whiteprimary600} />
+      <AntDesign name={name} size={24} color={color} />
     </Pressable>
   );
 };
