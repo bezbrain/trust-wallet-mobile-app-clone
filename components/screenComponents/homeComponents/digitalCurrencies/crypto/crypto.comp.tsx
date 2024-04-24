@@ -11,7 +11,6 @@ const CryptoComp = () => {
   const navigation: any = useNavigation();
 
   const cryptoHandler = (id: number) => {
-    // console.log(id);
     navigation.navigate("SinglePage", {
       cryptoId: id,
     });

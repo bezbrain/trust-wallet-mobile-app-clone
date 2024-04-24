@@ -1,6 +1,7 @@
 import React from "react";
 import { View, Image, Text, StyleSheet, Pressable } from "react-native";
 import { Colors } from "../../../../../../utils/colors";
+import { CryptoLogo } from "../../../../../general";
 
 const { greenprimary600, whiteprimary600, blackprimary100, redprimary700 } =
   Colors;
@@ -26,12 +27,7 @@ const CryptoCard = ({
 }: CryptoCardProp) => {
   return (
     <Pressable style={styles.cryptoContainer} onPress={handlePress}>
-      <Image
-        source={{
-          uri: image,
-        }}
-        style={styles.image}
-      />
+      <CryptoLogo image={image} />
       <View style={styles.marketValue}>
         <Text style={styles.whitishTextColor}>{name}</Text>
         <Text style={styles.grayishTextColor}>
@@ -66,11 +62,6 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     gap: 16,
     marginTop: 36,
-  },
-  image: {
-    width: 40,
-    height: 40,
-    borderRadius: 20,
   },
   marketValue: {
     //

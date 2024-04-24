@@ -8,6 +8,7 @@ export const generalStackOptions = {
   headerStyle: { backgroundColor: blackprimary900 },
   headerTintColor: whiteprimary600,
   contentStyle: { backgroundColor: blackprimary900 },
+  headerBackTitleVisible: false,
 };
 
 // FUNCTION TO HANDLE THE SINGLE CRYPTO PAGE OPTIONS
@@ -17,6 +18,6 @@ export const singleCrypto = (route: any) => {
 
   return {
     title: findCrypto?.name,
-    headerBackTitleVisible: false,
+    // headerBackTitleVisible: false,
   };
 };
