@@ -1,27 +1,27 @@
 export const ButtonContent = [
   {
     id: 1,
-    icon: "",
+    icon: "arrowup",
     name: "Send",
   },
   {
     id: 2,
-    icon: "",
+    icon: "arrowdown",
     name: "Receive",
   },
   {
     id: 3,
-    icon: "",
+    icon: "creditcard",
     name: "Buy",
   },
   {
     id: 4,
-    icon: "",
+    icon: "bank",
     name: "Sell",
   },
   {
     id: 5,
-    icon: "",
+    icon: "select1",
     name: "History",
   },
 ];
