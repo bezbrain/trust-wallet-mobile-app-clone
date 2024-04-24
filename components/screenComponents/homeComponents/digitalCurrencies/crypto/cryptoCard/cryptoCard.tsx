@@ -1,31 +1,31 @@
 import React from "react";
-import { View, Image, Text, StyleSheet } from "react-native";
+import { View, Image, Text, StyleSheet, Pressable } from "react-native";
 import { Colors } from "../../../../../../utils/colors";
 
 const { greenprimary600, whiteprimary600, blackprimary100, redprimary700 } =
   Colors;
 
 interface CryptoCardProp {
-  id: number;
   name: string;
   marketValue: string;
   increment: string;
   cryptoAmt: string;
   cryptoValue: string;
   image: string;
+  handlePress: () => void;
 }
 
 const CryptoCard = ({
-  id,
   name,
   marketValue,
   increment,
   cryptoAmt,
   cryptoValue,
   image,
+  handlePress,
 }: CryptoCardProp) => {
   return (
-    <View style={styles.cryptoContainer}>
+    <Pressable style={styles.cryptoContainer} onPress={handlePress}>
       <Image
         source={{
           uri: image,
@@ -55,7 +55,7 @@ const CryptoCard = ({
           ${cryptoValue}
         </Text>
       </View>
-    </View>
+    </Pressable>
   );
 };
 
