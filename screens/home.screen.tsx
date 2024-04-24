@@ -7,6 +7,8 @@ import { OptionsIcons } from "../assets/icons";
 import { HeaderComp } from "../components/screenComponents/homeComponents";
 import { ActivitiesComp } from "../components/screenComponents/homeComponents/activitiesComp";
 import { rippleEffect } from "../styles/ripple-effect";
+import { CryptoComp } from "../components/screenComponents/homeComponents/digitalCurrencies/crypto";
+import { NftsComp } from "../components/screenComponents/homeComponents/digitalCurrencies/nfts";
 
 const { whiteprimary600, greenprimary600 } = Colors;
 
@@ -77,6 +79,9 @@ const HomeScreen = () => {
             </Pressable>
           </View>
         </View>
+
+        {/* Render Crypto or NFTs components */}
+        {currentPage ? <CryptoComp /> : <NftsComp />}
       </View>
     </ScreenWrapper>
   );

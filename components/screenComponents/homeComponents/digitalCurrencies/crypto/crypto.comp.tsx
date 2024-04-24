@@ -1,12 +1,18 @@
 import React from "react";
-import { Text, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 
 const CryptoComp = () => {
   return (
     <View>
-      <Text>Crypto</Text>
+      <Text style={styles.text}>Crypto</Text>
     </View>
   );
 };
 
 export default CryptoComp;
+
+const styles = StyleSheet.create({
+  text: {
+    color: "#ccc",
+  },
+});
