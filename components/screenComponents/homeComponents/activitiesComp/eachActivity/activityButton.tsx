@@ -2,6 +2,7 @@ import React from "react";
 import { Pressable, StyleSheet, Text, View } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
 import { Colors } from "../../../../../utils/colors";
+import { rippleEffect } from "../../../../../styles/ripple-effect";
 
 const { whiteprimary600, blackprimary600 } = Colors;
 
@@ -13,7 +14,9 @@ interface AcivityButtonProp {
 const ActivityButton = ({ icon, name }: AcivityButtonProp) => {
   return (
     <View>
-      <Pressable style={styles.iconContainer}>
+      <Pressable
+        style={({ pressed }) => rippleEffect(pressed, styles.iconContainer)}
+      >
         <AntDesign name={icon} size={20} color={whiteprimary600} />
       </Pressable>
       <Text style={styles.iconText}>{name}</Text>
