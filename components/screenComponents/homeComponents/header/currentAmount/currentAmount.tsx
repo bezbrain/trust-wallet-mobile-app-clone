@@ -4,6 +4,7 @@ import { Colors } from "../../../../../utils/colors";
 import { Entypo } from "@expo/vector-icons";
 import { useHomeContext } from "../../../../../context/homeContext/homeContext";
 import { HideValue } from "../../../../helpers";
+import { rippleEffect } from "../../../../../styles/ripple-effect";
 
 const { whiteprimary600, blackprimary100 } = Colors;
 
@@ -15,7 +16,10 @@ const CurrentAmount = () => {
   };
 
   return (
-    <Pressable onPress={handleToggleValue} style={styles.rootContainer}>
+    <Pressable
+      onPress={handleToggleValue}
+      style={({ pressed }) => rippleEffect(pressed, styles.rootContainer)}
+    >
       <View style={styles.valueContainer}>
         {!isOpen && <Text style={styles.valueAmount}>$6.60</Text>}
         {isOpen && <HideValue />}
