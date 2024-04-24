@@ -1,47 +1,34 @@
 import React from "react";
 import { View, Image, Text, StyleSheet, Pressable } from "react-native";
-import { Colors } from "../../../../../../utils/colors";
-import { CryptoLogo } from "../../../../../general";
+import { Colors } from "../../../utils/colors";
+import CryptoLogo from "../image/cryptoLogo";
 
 const { greenprimary600, whiteprimary600, blackprimary100, redprimary700 } =
   Colors;
 
-interface CryptoCardProp {
+interface SemiFullCardProp {
   name: string;
   marketValue: string;
-  increment: string;
   cryptoAmt: string;
   cryptoValue: string;
   image: string;
   handlePress: () => void;
 }
 
-const CryptoCard = ({
+const SemiFullCard = ({
   name,
   marketValue,
-  increment,
   cryptoAmt,
   cryptoValue,
   image,
   handlePress,
-}: CryptoCardProp) => {
+}: SemiFullCardProp) => {
   return (
     <Pressable style={styles.cryptoContainer} onPress={handlePress}>
       <CryptoLogo image={image} />
-      <View style={styles.marketValue}>
+      <View>
         <Text style={styles.whitishTextColor}>{name}</Text>
-        <Text style={styles.grayishTextColor}>
-          ${marketValue}{" "}
-          <Text
-            style={
-              increment.includes("+")
-                ? styles.greenishTextColor
-                : styles.redishTextColor
-            }
-          >
-            {increment}
-          </Text>
-        </Text>
+        <Text style={styles.grayishTextColor}>${marketValue} </Text>
       </View>
       <View style={styles.myValue}>
         <Text style={[styles.whitishTextColor, { marginLeft: "auto" }]}>
@@ -55,16 +42,13 @@ const CryptoCard = ({
   );
 };
 
-export default CryptoCard;
+export default SemiFullCard;
 
 const styles = StyleSheet.create({
   cryptoContainer: {
     flexDirection: "row",
     gap: 16,
     marginTop: 36,
-  },
-  marketValue: {
-    //
   },
   myValue: {
     marginLeft: "auto",
@@ -75,11 +59,5 @@ const styles = StyleSheet.create({
   grayishTextColor: {
     color: blackprimary100,
     marginTop: 6,
-  },
-  greenishTextColor: {
-    color: greenprimary600,
-  },
-  redishTextColor: {
-    color: redprimary700,
   },
 });

@@ -4,8 +4,8 @@ import React from "react";
 import { StyleSheet, View } from "react-native";
 import { FlatList } from "react-native-gesture-handler";
 import { crypto } from "../../../../../data/homeData";
-import CryptoCard from "./cryptoCard/cryptoCard";
 import { useNavigation } from "@react-navigation/native";
+import { FullCard } from "../../../../general";
 
 const CryptoComp = () => {
   const navigation: any = useNavigation();
@@ -22,7 +22,7 @@ const CryptoComp = () => {
         <FlatList
           data={crypto}
           renderItem={(eachObj) => (
-            <CryptoCard
+            <FullCard
               name={eachObj.item.name}
               marketValue={eachObj.item.marketValue}
               increment={eachObj.item.increment}

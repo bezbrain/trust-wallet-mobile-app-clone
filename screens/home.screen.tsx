@@ -72,6 +72,7 @@ const HomeScreen = () => {
               <Text style={styles.headerText}>Crypto</Text>
               {currentPage && <View style={styles.border}></View>}
             </Pressable>
+
             <Pressable
               style={({ pressed }) => rippleEffect(pressed)}
               onPress={showNftsHandler}
