@@ -1,11 +1,33 @@
 import React from "react";
-import { Text, View } from "react-native";
+import { FlatList, Text, View } from "react-native";
+import { ScreenWrapper } from "../../components/wrappers";
+import { FullCard, InputField } from "../../components/general";
+import { crypto } from "../../data/homeData";
 
 const ListOfBuyScreen = () => {
+  const cryptoHandler = (id: number) => {
+    //
+  };
+
   return (
-    <View>
-      <Text>List of Coin to buy</Text>
-    </View>
+    <ScreenWrapper>
+      <InputField />
+      <FlatList
+        data={crypto}
+        renderItem={(eachObj) => (
+          <FullCard
+            name={eachObj.item.name}
+            marketValue={eachObj.item.marketValue}
+            cryptoAmt={eachObj.item.cryptoAmt}
+            cryptoValue={eachObj.item.cryptoValue}
+            increment={eachObj.item.increment}
+            image={eachObj.item.image}
+            handlePress={() => cryptoHandler(eachObj.item.id)}
+          />
+        )}
+        keyExtractor={(each) => each.id.toString()}
+      />
+    </ScreenWrapper>
   );
 };
 

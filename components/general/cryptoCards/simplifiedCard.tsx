@@ -9,8 +9,6 @@ const { greenprimary600, whiteprimary600, blackprimary100, redprimary700 } =
 interface SimplifiedCardProp {
   name: string;
   marketValue: string;
-  cryptoAmt: string;
-  cryptoValue: string;
   image: string;
   handlePress: () => void;
 }
@@ -18,8 +16,6 @@ interface SimplifiedCardProp {
 const SimplifiedCard = ({
   name,
   marketValue,
-  cryptoAmt,
-  cryptoValue,
   image,
   handlePress,
 }: SimplifiedCardProp) => {
