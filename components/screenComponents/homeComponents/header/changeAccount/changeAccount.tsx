@@ -4,16 +4,19 @@ import { Colors } from "../../../../../utils/colors";
 import { Ionicons } from "@expo/vector-icons";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { FontAwesome } from "@expo/vector-icons";
+import { rippleEffect } from "../../../../../styles/ripple-effect";
 
 const { whiteprimary600 } = Colors;
 
 const ChangeAccount = () => {
   return (
     <View style={styles.accountContainer}>
-      <View style={styles.accountName}>
+      <Pressable
+        style={({ pressed }) => rippleEffect(pressed, styles.accountName)}
+      >
         <Text style={styles.currentAccount}>Multi-Coin Wall...</Text>
         <FontAwesome name="caret-down" size={20} color={whiteprimary600} />
-      </View>
+      </Pressable>
 
       <View style={styles.iconsContainer}>
         <Pressable>

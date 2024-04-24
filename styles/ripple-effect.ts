@@ -1,7 +1,9 @@
-export const rippleEffect = (
-  pressed: boolean,
-  activeHeaderIcon: Object,
-  looseStyle?: Object
-) => {
-  return [pressed && activeHeaderIcon, looseStyle];
+export const rippleEffect = (pressed: boolean, looseStyle?: Object) => {
+  return [
+    pressed && {
+      opacity: 0.5,
+    },
+    ,
+    looseStyle,
+  ];
 };

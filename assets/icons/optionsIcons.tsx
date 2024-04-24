@@ -18,9 +18,7 @@ const OptionsIcons = ({ name, handlePress }: OptionsIconsProps) => {
 
   return (
     <Pressable
-      style={({ pressed }) =>
-        rippleEffect(pressed, styles.activeHeaderIcon, styles.iconContainer)
-      }
+      style={({ pressed }) => rippleEffect(pressed, styles.iconContainer)}
       onPress={handlePress}
       android_ripple={{ color: "#ccc" }}
     >
@@ -34,8 +32,5 @@ export default OptionsIcons;
 const styles = StyleSheet.create({
   iconContainer: {
     marginHorizontal: 8,
-  },
-  activeHeaderIcon: {
-    opacity: 0.5,
   },
 });
