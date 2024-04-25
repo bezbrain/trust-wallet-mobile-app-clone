@@ -7,13 +7,15 @@ const { blackprimary100, blackprimary600, whiteprimary600 } = Colors;
 
 interface InputFieldProp {
   handlePress?: () => void;
+  isFocus?: boolean;
   // textInputRef?: RefObject<TextInput>;
 }
 
 const InputField = ({
   handlePress,
-}: // textInputRef,
-InputFieldProp) => {
+  // textInputRef,
+  isFocus,
+}: InputFieldProp) => {
   return (
     // <KeyboardAvoidingView behavior="position">
     <Pressable style={styles.inputContainer}>
@@ -23,7 +25,7 @@ InputFieldProp) => {
         placeholderTextColor={blackprimary100}
         onPressIn={handlePress}
         // ref={textInputRef}
-        autoFocus={true}
+        autoFocus={isFocus}
       />
       <FontAwesome
         name="search"

@@ -12,7 +12,7 @@ const SearchScreen = () => {
 
   return (
     <ScreenWrapper>
-      <InputField />
+      <InputField isFocus={true} />
       <FlatList
         data={crypto}
         renderItem={(eachObj) => (

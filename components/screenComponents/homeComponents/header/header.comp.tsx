@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { InputField } from "../../../general";
 import { Keyboard, TouchableWithoutFeedback, View } from "react-native";
 import ChangeAccount from "./changeAccount/changeAccount";
@@ -12,10 +12,14 @@ const HeaderComp = () => {
     navigation.navigate("Search");
   };
 
+  // useEffect(() => {
+  //   Keyboard.dismiss();
+  // }, []);
+
   return (
     <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
       <View>
-        <InputField handlePress={searchHandler} />
+        <InputField handlePress={searchHandler} isFocus={false} />
         <ChangeAccount />
         <CurrentAmount />
       </View>
