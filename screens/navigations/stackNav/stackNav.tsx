@@ -9,6 +9,7 @@ import ListOfReceiveScreen from "../../listOf/listOfReceive.screen";
 import ListOfBuyScreen from "../../listOf/listOfBuy.screen";
 import ListOfSellScreen from "../../listOf/listOfSell.screen";
 import TransactionHistoryScreen from "../../transactionHistory.screen";
+import SearchScreen from "../../search.screen";
 
 const { blackprimary900, whiteprimary600, greenprimary600 } = Colors;
 
@@ -34,6 +35,9 @@ const StackNav = () => {
       <Stack.Screen name="Buy" component={ListOfBuyScreen} />
       <Stack.Screen name="Sell" component={ListOfSellScreen} />
       <Stack.Screen name="History" component={TransactionHistoryScreen} />
+
+      {/* Search Screen */}
+      <Stack.Screen name="Search" component={SearchScreen} />
     </Stack.Navigator>
   );
 };

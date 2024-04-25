@@ -2,6 +2,7 @@ import HomeScreen from "./home.screen";
 import EarnScreen from "./earn.screen";
 import SwapScreen from "./swap.screen";
 import DiscoverScreen from "./discover.screen";
+import SearchScreen from "./search.screen";
 
 import ListOfSend from "./listOf/listOfSend.screen";
 import ListOfReceiveScreen from "./listOf/listOfReceive.screen";
@@ -19,6 +20,7 @@ export {
   EarnScreen,
   SwapScreen,
   DiscoverScreen,
+  SearchScreen,
   ListOfSend,
   ListOfReceiveScreen,
   ListOfBuyScreen,

@@ -1,17 +1,29 @@
-import React from "react";
-import { StyleSheet, TextInput, View } from "react-native";
+import React, { RefObject } from "react";
+import { Pressable, StyleSheet, TextInput } from "react-native";
 import { FontAwesome } from "@expo/vector-icons";
 import { Colors } from "../../../utils/colors";
 
-const { blackprimary100, blackprimary600 } = Colors;
+const { blackprimary100, blackprimary600, whiteprimary600 } = Colors;
 
-const InputField = () => {
+interface InputFieldProp {
+  handlePress?: () => void;
+  // textInputRef?: RefObject<TextInput>;
+}
+
+const InputField = ({
+  handlePress,
+}: // textInputRef,
+InputFieldProp) => {
   return (
-    <View style={styles.inputContainer}>
+    // <KeyboardAvoidingView behavior="position">
+    <Pressable style={styles.inputContainer}>
       <TextInput
         placeholder="Search"
         style={styles.inputField}
         placeholderTextColor={blackprimary100}
+        onPressIn={handlePress}
+        // ref={textInputRef}
+        autoFocus={true}
       />
       <FontAwesome
         name="search"
@@ -19,7 +31,8 @@ const InputField = () => {
         color={blackprimary100}
         style={styles.icon}
       />
-    </View>
+    </Pressable>
+    // </KeyboardAvoidingView>
   );
 };
 
@@ -36,6 +49,7 @@ const styles = StyleSheet.create({
     paddingLeft: 48,
     borderRadius: 20,
     fontSize: 18,
+    color: whiteprimary600,
   },
   icon: {
     position: "absolute",
