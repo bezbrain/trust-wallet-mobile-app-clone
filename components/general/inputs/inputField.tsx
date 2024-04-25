@@ -26,6 +26,8 @@ const InputField = ({
         onPressIn={handlePress}
         // ref={textInputRef}
         autoFocus={isFocus}
+        autoCapitalize="none"
+        autoCorrect={false}
       />
       <FontAwesome
         name="search"
